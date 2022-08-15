@@ -1,0 +1,27 @@
+# cache
+.next/
+out/
+
+# production
+build/
+
+# misc
+*.pem
+
+# debug
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# pnpm
+node_modules/
+.php/
+.pnp.js
+
+# environment
+.env.development.local
+.env.production.local
+.env.test.local
+.env.local
+.env

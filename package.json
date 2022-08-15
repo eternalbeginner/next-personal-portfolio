@@ -1,0 +1,48 @@
+{
+  "name": "personal-portfolio",
+  "description": "My personal portfolio website created with Next and React",
+  "displayName": "Personal Portfolio",
+  "homepage": "https://github.com/eternalbeginner/next-personal-portfolio",
+  "readme": "https://github.com/eternalbeginner/next-personal-portfolio/tree/main/blob/README.md",
+  "license": "MIT",
+  "author": {
+    "email": "ini.dwiii@gmail.com",
+    "name": "Dwi Payana",
+    "url": "https://github.com/eternalbeginner"
+  },
+  "categories": [
+    "Other"
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/server": "^11.10.0",
+    "@mantine/core": "^5.1.6",
+    "@mantine/hooks": "^5.1.6",
+    "@mantine/next": "^5.1.6",
+    "@tabler/icons": "^1.81.0",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.2",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.21.0",
+    "eslint-config-next": "^12.2.5"
+  },
+  "scripts": {
+    "build": "next build",
+    "commit": "cz",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/eternalbeginner/next-personal-portfolio.git"
+  }
+}
