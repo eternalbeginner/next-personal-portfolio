@@ -1,10 +1,21 @@
-import { MantineProvider } from "@mantine/core";
+import { MantineProvider, type MantineThemeOverride } from "@mantine/core";
 import { type AppProps } from "next/app";
 import Head from "next/head";
 
 import GlobalStyles from "@/components/commons/GlobalStyles";
 import RouterTransition from "@/components/commons/RouterTransition";
 import MainLayout from "@/components/layouts/MainLayout";
+
+const customTheme: MantineThemeOverride = {
+  headings: {
+    fontFamily: "Outfit",
+    sizes: {
+      h3: {
+        fontWeight: 500,
+      },
+    },
+  },
+};
 
 const _App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -18,7 +29,7 @@ const _App: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="description" content="I'm an Front-End developer living in Bali, Indonesia" />
         <title>Dwi Payana</title>
       </Head>
-      <MantineProvider withCSSVariables withGlobalStyles withNormalizeCSS>
+      <MantineProvider theme={customTheme} withCSSVariables withGlobalStyles withNormalizeCSS>
         <GlobalStyles />
         <RouterTransition />
         <MainLayout>

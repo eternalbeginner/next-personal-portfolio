@@ -3,15 +3,40 @@ import { Global } from "@mantine/core";
 const GlobalStyles: React.FC = () => {
   return (
     <Global
-      styles={{
-        "*, html": {
-          scrollBehavior: "smooth",
+      styles={[
+        {
+          "@font-face": {
+            fontFamily: "Outfit",
+            fontStyle: "normal",
+            fontWeight: 700,
+            src: `url("/fonts/Outfit/Bold.ttf")`,
+          },
         },
-        body: {
-          margin: 0,
-          padding: 0,
+        {
+          "@font-face": {
+            fontFamily: "Outfit",
+            fontStyle: "normal",
+            fontWeight: 500,
+            src: `url("/fonts/Outfit/Medium.ttf")`,
+          },
         },
-      }}
+        {
+          "@font-face": {
+            fontFamily: "Outfit",
+            fontStyle: "normal",
+            src: `url("/fonts/Outfit/Regular.ttf")`,
+          },
+        },
+        {
+          "*, html": {
+            scrollBehavior: "smooth",
+          },
+          body: {
+            margin: 0,
+            padding: 0,
+          },
+        },
+      ]}
     />
   );
 };
