@@ -15,13 +15,13 @@ type HeroProps = {
 
 const Hero = ({ avatar, socials, children }: HeroProps) => {
   return (
-    <Stack py={80} spacing={30}>
+    <Stack pb={25} pt={80} spacing={30}>
       {avatar && (
         <Center>
           <Avatar alt={avatar.alt} src={avatar.src} size={avatar.size} radius={avatar.size / 2} />
         </Center>
       )}
-      <Stack spacing={30} sx={{ width: "60%", margin: "auto", textAlign: "center" }}>
+      <Stack spacing={30} sx={{ width: "75%", margin: "auto", textAlign: "center" }}>
         {children}
         {socials && (
           <Group position="center">

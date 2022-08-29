@@ -11,7 +11,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <>
       <Navbar brand={brand} menu={menu} />
-      <Container size="lg">{children}</Container>
+      <Container size="md">{children}</Container>
     </>
   );
 };

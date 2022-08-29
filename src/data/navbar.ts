@@ -8,7 +8,9 @@ export const brand: NavbarBrandProps = {
 };
 
 export const menu: NavbarMenuProps["items"] = [
-  { label: "Works", link: "/works" },
-  { label: "Resume", link: "/resume" },
-  { label: "Contact", link: "/resume" },
+  { label: "Me", link: "/" },
+  { label: "Services", link: "#services" },
+  { label: "Resume", link: "#resume" },
+  { label: "Projects", link: "#projects" },
+  { label: "Contact", link: "/contact" },
 ].map((item, index) => ({ ...item, id: index + 1 }));

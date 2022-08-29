@@ -5,6 +5,8 @@ import {
   IconBrandLinkedin,
   IconBrandYoutube,
   IconPhoneCall,
+  IconCode,
+  IconCodeOff,
   type TablerIcon,
 } from "@tabler/icons";
 
@@ -16,6 +18,31 @@ export type DataSocial = {
 };
 
 export type DataSocials = DataSocial[];
+
+export type DataService = {
+  id: number;
+  title: string;
+  description: string;
+  icon: TablerIcon;
+  iconColor: DefaultMantineColor;
+};
+
+export type DataServices = DataService[];
+
+export const services: DataServices = [
+  {
+    title: "Web Dev",
+    description: "Static website or web-app. I love to make fantastic and interactive websites.",
+    icon: IconCode,
+    iconColor: "blue",
+  },
+  {
+    title: "No-Code",
+    description: "I also offer services to develop apps with no-code solution.",
+    icon: IconCodeOff,
+    iconColor: "red",
+  },
+].map((item, index) => ({ ...item, id: index + 1 }));
 
 export const socials: DataSocials = [
   { link: "https://youtube.com", icon: IconBrandYoutube, iconColor: "red" },

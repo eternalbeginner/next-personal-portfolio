@@ -1,8 +1,10 @@
 import { IconArrowUpRight } from "@tabler/icons";
 
 import { Hero } from "@/components/hero";
+import { Panel } from "@/components/panel";
+import { Services } from "@/components/services";
 
-import { socials } from "@/data/common";
+import { services, socials } from "@/data/common";
 import { avatar } from "@/data/hero";
 
 const IndexPage: React.FC = () => {
@@ -28,6 +30,20 @@ const IndexPage: React.FC = () => {
           </Hero.Cta.Primary>
         </Hero.Cta>
       </Hero>
+      <Panel id="services">
+        <Panel.Title isCentered>Services.</Panel.Title>
+        <Services>
+          {services.map((item) => (
+            <Services.Item
+              key={item.id}
+              title={item.title}
+              icon={item.icon}
+              iconColor={item.iconColor}>
+              {item.description}
+            </Services.Item>
+          ))}
+        </Services>
+      </Panel>
     </>
   );
 };
