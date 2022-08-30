@@ -36,7 +36,7 @@ const IndexPage: React.FC = () => {
           </Hero.Header.Description>
         </Hero.Header>
         <Hero.Cta>
-          <Hero.Cta.Secondary href="/downloads/test.pdf" isDownloadable>
+          <Hero.Cta.Secondary href="/downloads/resume.pdf" isDownloadable>
             Download My Resume
           </Hero.Cta.Secondary>
           <Hero.Cta.Primary href="https://linkedin.com/in/wiipaaa" icon={IconArrowUpRight}>
@@ -93,7 +93,7 @@ const IndexPage: React.FC = () => {
             component="a"
             color="dark"
             download={true}
-            href="/downloads/test.pdf"
+            href="/downloads/resume.pdf"
             radius="xl"
             rightIcon={<IconDownload size={18} />}
             sx={(theme) => ({ [theme.fn.smallerThan("md")]: { width: "100%" } })}>

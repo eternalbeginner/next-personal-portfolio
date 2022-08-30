@@ -18,7 +18,7 @@ const CtaSecondary: React.FC<CtaSecondaryProps> = (props) => {
         component="a"
         color="dark"
         download={true}
-        href="/downloads/test.pdf"
+        href="/downloads/resume.pdf"
         radius="xl"
         rightIcon={Icon && <Icon size={18} />}
         size="md"
