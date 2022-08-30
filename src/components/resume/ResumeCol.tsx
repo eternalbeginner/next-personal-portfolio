@@ -8,7 +8,7 @@ type ResumeColProps = {
 
 const ResumeCol = ({ children }: ResumeColProps) => {
   return (
-    <Grid.Col span={6}>
+    <Grid.Col md={6}>
       <Stack spacing={35}>{children}</Stack>
     </Grid.Col>
   );

@@ -2,8 +2,8 @@ import { MantineProvider, type MantineThemeOverride } from "@mantine/core";
 import { type AppProps } from "next/app";
 import Head from "next/head";
 
-import GlobalStyles from "@/components/commons/GlobalStyles";
-import RouterTransition from "@/components/commons/RouterTransition";
+import GlobalStyles from "@/components/common/GlobalStyles";
+import RouterTransition from "@/components/common/RouterTransition";
 import MainLayout from "@/components/layouts/MainLayout";
 
 const customTheme: MantineThemeOverride = {

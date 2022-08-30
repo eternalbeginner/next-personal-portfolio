@@ -8,7 +8,16 @@ type PanelProps = StackProps & {
 
 const Panel = ({ children, ...stackProps }: PanelProps) => {
   return (
-    <Stack {...stackProps} py={50} spacing={30}>
+    <Stack
+      {...stackProps}
+      py={50}
+      spacing={30}
+      sx={(theme) => ({
+        [theme.fn.smallerThan("md")]: {
+          paddingTop: theme.spacing.sm,
+          paddingBottom: theme.spacing.sm,
+        },
+      })}>
       {children}
     </Stack>
   );

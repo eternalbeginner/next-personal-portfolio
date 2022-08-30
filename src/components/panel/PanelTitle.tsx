@@ -8,7 +8,10 @@ type PanelTitleProps = {
 const PanelTitle: React.FC<PanelTitleProps> = ({ isCentered = false, children }) => {
   return (
     <Group position={isCentered ? "center" : "left"}>
-      <Title sx={{ maxWidth: "30%" }}>{children}</Title>
+      <Title
+        sx={(theme) => ({ maxWidth: "30%", [theme.fn.smallerThan("md")]: { maxWidth: "100%" } })}>
+        {children}
+      </Title>
     </Group>
   );
 };

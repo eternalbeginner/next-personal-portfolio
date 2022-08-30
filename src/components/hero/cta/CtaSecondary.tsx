@@ -22,6 +22,7 @@ const CtaSecondary: React.FC<CtaSecondaryProps> = (props) => {
         radius="xl"
         rightIcon={Icon && <Icon size={18} />}
         size="md"
+        sx={(theme) => ({ [theme.fn.smallerThan("md")]: { width: "100%" } })}
         variant="default">
         {children}
       </Button>

@@ -1,6 +1,6 @@
 import {
   NavigationProgress,
-  resetNavigationProgress,
+  setNavigationProgress,
   startNavigationProgress,
 } from "@mantine/nprogress";
 import { useRouter } from "next/router";
@@ -10,7 +10,7 @@ const RouterTransition: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleComplete = () => resetNavigationProgress();
+    const handleComplete = () => setNavigationProgress(100);
     const handleStart = (url: string) => router.asPath !== url && startNavigationProgress();
 
     router.events.on("routeChangeComplete", handleComplete);

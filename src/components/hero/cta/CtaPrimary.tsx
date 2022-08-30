@@ -16,7 +16,8 @@ const CtaPrimary: React.FC<CtaPrimaryProps> = ({ href, icon: Icon, children }) =
         color="dark"
         radius="xl"
         rightIcon={Icon && <Icon size={18} />}
-        size="md">
+        size="md"
+        sx={(theme) => ({ [theme.fn.smallerThan("md")]: { width: "100%" } })}>
         {children}
       </Button>
     </Link>

@@ -11,7 +11,7 @@ export type NavbarMenuProps = {
 
 const NavbarMenu: React.FC<NavbarMenuProps> = ({ items }) => {
   return (
-    <Group spacing="xl">
+    <Group spacing="xl" sx={(theme) => ({ [theme.fn.smallerThan("md")]: { display: "none" } })}>
       {items.map((item) => (
         <Link key={item.id} href={item.link} passHref>
           <Anchor color="dark">{item.label}</Anchor>

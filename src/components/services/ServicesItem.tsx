@@ -12,8 +12,8 @@ const ServicesItem: React.FC<ServicesItemProps> = (props) => {
   const { title, icon: Icon, iconColor = "blue", children } = props;
 
   return (
-    <Col span={4}>
-      <Stack spacing={30} py="xl">
+    <Col md={4}>
+      <Stack spacing={30} pb="sm" pt="xl">
         {Icon && (
           <ThemeIcon mx="auto" color={iconColor} radius="lg" size={60} variant="light">
             <Icon size={30} />

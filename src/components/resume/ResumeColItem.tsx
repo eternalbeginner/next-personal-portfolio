@@ -19,7 +19,9 @@ const ResumeColItem = <T,>({
     <Stack spacing={20}>
       <Title order={3}>{title}</Title>
       {isGrid ? (
-        <SimpleGrid cols={gridCol}>{data.map((item) => children(item))}</SimpleGrid>
+        <SimpleGrid cols={gridCol} breakpoints={[{ cols: 1, maxWidth: "md" }]}>
+          {data.map((item) => children(item))}
+        </SimpleGrid>
       ) : (
         data.map((item) => children(item))
       )}

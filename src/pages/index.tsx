@@ -88,17 +88,24 @@ const IndexPage: React.FC = () => {
             </Resume.Col.Item>
           </Resume.Col>
         </Resume>
-        <Group position="center">
+        <Group mt="md" position="center">
           <Button
             component="a"
             color="dark"
             download={true}
             href="/downloads/test.pdf"
             radius="xl"
-            rightIcon={<IconDownload size={18} />}>
+            rightIcon={<IconDownload size={18} />}
+            sx={(theme) => ({ [theme.fn.smallerThan("md")]: { width: "100%" } })}>
             Download My Full Resume
           </Button>
         </Group>
+      </Panel>
+      <Panel id="projects">
+        <Panel.Title>Projects I&apos;ve Been Built</Panel.Title>
+        <Grid>
+          <Grid.Col md={6}>Hello</Grid.Col>
+        </Grid>
       </Panel>
     </>
   );
