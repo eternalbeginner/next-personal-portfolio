@@ -11,7 +11,7 @@ type ExperienceProps = {
 const Experience: React.FC<ExperienceProps> = ({ data }) => {
   return (
     <Stack spacing={2}>
-      <Link href={`/experience/${data.id}`} passHref>
+      <Link href={data.companyLink} passHref>
         <Anchor color="dark" size="lg" target="_blank" weight={500}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 10 }}>
             <span>{data.company}</span>

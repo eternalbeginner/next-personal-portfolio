@@ -45,6 +45,15 @@ export type DataExperience = {
 
 export type DataExperiences = DataExperience[];
 
+export type DataProject = {
+  id: number;
+  label: string;
+  description: string;
+  image: string;
+};
+
+export type DataProjects = DataProject[];
+
 export type DataService = {
   id: number;
   title: string;
@@ -131,6 +140,31 @@ export const experiences: DataExperiences = [
     endDate: "December 2019",
   },
 ].map((item, index) => ({ ...item, id: index + 1 } as DataExperience));
+
+export const projects: DataProjects = [
+  {
+    label: "E-Government",
+    description:
+      "Web application used to report public aspirations from poepole towards the government.",
+    image: "/images/projects/1.png",
+  },
+  {
+    label: "Visitor Parking Log",
+    description:
+      "App thats used to logging visitor parking data, created with Microsoft PowerApps and Microsoft Sharepoint.",
+    image: "/images/projects/2.png",
+  },
+  {
+    label: "Product's Barcode Scanner",
+    description: "Micosoft PowerApps based application, used to scan the product's barcode",
+    image: "/images/projects/3.png",
+  },
+  {
+    label: "Translation App",
+    description: "Languages translation mobile app created using Microsoft PowerApps",
+    image: "/images/projects/4.png",
+  },
+].map((item, index) => ({ ...item, id: index + 1 } as DataProject));
 
 export const services: DataServices = [
   {

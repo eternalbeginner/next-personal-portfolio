@@ -1,25 +1,27 @@
-import { Anchor, Box, Button, Grid, Group, Stack, Text, Title } from "@mantine/core";
-import { IconArrowUpRight, IconCheck, IconDownload } from "@tabler/icons";
-import Link from "next/link";
+import { Anchor, Box, Button, Center, Grid, Group, Stack, Text, Title } from "@mantine/core";
+import { IconArrowUpRight, IconDownload, IconHeartHandshake } from "@tabler/icons";
 
 import { Certification } from "@/components/certification";
 import { Education } from "@/components/education";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";
 import { Panel } from "@/components/panel";
-import { Services } from "@/components/services";
 import { Resume } from "@/components/resume";
+import { Services } from "@/components/services";
+import { Skill } from "@/components/skill";
 
 import {
-  type DataEducation,
-  type DataExperience,
+  projects,
   services,
   socials,
   type DataCertification,
+  type DataEducation,
+  type DataExperience,
 } from "@/data/common";
 import { avatar } from "@/data/hero";
 import { data } from "@/data/resume";
-import { Skill } from "@/components/skill";
+import Image from "next/image";
+import Link from "next/link";
 
 const IndexPage: React.FC = () => {
   return (
@@ -102,10 +104,48 @@ const IndexPage: React.FC = () => {
         </Group>
       </Panel>
       <Panel id="projects">
-        <Panel.Title>Projects I&apos;ve Been Built</Panel.Title>
+        <Panel.Title>Projects I&apos;ve Been Built.</Panel.Title>
         <Grid>
-          <Grid.Col md={6}>Hello</Grid.Col>
+          {projects.map((item) => (
+            <Grid.Col key={item.id} md={6}>
+              <Stack>
+                <Image
+                  alt={item.label}
+                  width={472}
+                  height={472}
+                  src={item.image}
+                  title={item.label}
+                />
+                <Stack pb="xl" spacing={0}>
+                  <Title order={4}>{item.label}</Title>
+                  <Text>{item.description}</Text>
+                </Stack>
+              </Stack>
+            </Grid.Col>
+          ))}
         </Grid>
+      </Panel>
+      <Panel id="contact" pt={50} pb={100}>
+        <Center>
+          <Stack
+            sx={(theme) => ({
+              maxWidth: "70%",
+              [theme.fn.smallerThan("md")]: { maxWidth: "100%" },
+            })}>
+            <Title>
+              Let me know if you&apos;re interested to talk about a collaboration.
+              <IconHeartHandshake size={30} />
+            </Title>
+            <Link href="https://linkedin.com/in/wiipaaa" passHref>
+              <Anchor<React.ComponentPropsWithoutRef<typeof Title>>
+                component={Title}
+                variant="link"
+                size={30}>
+                Let&apos;s collaborate
+              </Anchor>
+            </Link>
+          </Stack>
+        </Center>
       </Panel>
     </>
   );

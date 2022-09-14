@@ -1,9 +1,12 @@
-import { Affix, ActionIcon, Container, Transition } from "@mantine/core";
+import { ActionIcon, Affix, Container, Transition } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
+import { IconArrowUp } from "@tabler/icons";
 
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+
 import { brand, menu } from "@/data/navbar";
-import { IconArrowUp } from "@tabler/icons";
+import { socials } from "@/data/common";
 
 type MainLayoutProps = {
   children: React.ReactNode;
@@ -31,6 +34,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </Transition>
         </Affix>
       </Container>
+      <Footer menu={socials} />
     </>
   );
 };
