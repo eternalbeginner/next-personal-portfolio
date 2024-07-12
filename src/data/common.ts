@@ -99,6 +99,24 @@ export const certifications: DataCertifications = [
     obtainedFrom: "LinkedIn Learning",
     obtainedOn: "Nov 2021",
   },
+  {
+    name: "SQL Basic",
+    link: "https://www.hackerrank.com/certificates/f45ea555d1a9",
+    obtainedFrom: "Hackerrank",
+    obtainedOn: "May 2024",
+  },
+  {
+    name: "SQL Intermediate",
+    link: "https://www.hackerrank.com/certificates/b7383db36d3b",
+    obtainedFrom: "Hackerrank",
+    obtainedOn: "May 2024",
+  },
+  {
+    name: "SQL Advanced",
+    link: "https://www.hackerrank.com/certificates/a9191e81183d",
+    obtainedFrom: "Hackerrank",
+    obtainedOn: "May 2024",
+  },
 ].map((item, index) => ({ ...item, id: index + 1 } as DataCertification));
 
 export const educations: DataEducations = [
@@ -139,6 +157,16 @@ export const experiences: DataExperiences = [
     startDate: "October 2019",
     endDate: "December 2019",
   },
+  {
+    company: "Deni Jewelry",
+    companyLink: "https://denijewelry.com/",
+    job: "Back-End Developer",
+    jobType: "employee",
+    jobDescription:
+      "Contributed on revamping the old website, include the business logic and database structure",
+    startDate: "July 2023",
+    endDate: "October 2023",
+  },
 ].map((item, index) => ({ ...item, id: index + 1 } as DataExperience));
 
 export const projects: DataProjects = [
@@ -146,6 +174,18 @@ export const projects: DataProjects = [
     label: "E-Government",
     description:
       "Web application used to report public aspirations from poepole towards the government.",
+    image: "/images/projects/1.png",
+  },
+  {
+    label: "Deni Jewelry",
+    description:
+      "Jewelry retail website powered by Laravel",
+    image: "/images/projects/1.png",
+  },
+  {
+    label: "JFest Bali",
+    description:
+      "E-ticketing website for an event called JFest (Japanese Festival)",
     image: "/images/projects/1.png",
   },
   {
@@ -199,19 +239,19 @@ export const skills: DataSkills = {
   ].map((item, index) => ({ ...item, id: index + 1 } as DataSkill)),
   framework: [
     { label: "React", isConfident: true },
-    { label: "Laravel", isConfident: false },
+    { label: "NextJS", isConfident: false },
+    { label: "Laravel", isConfident: true },
   ].map((item, index) => ({ ...item, id: index + 1 } as DataSkill)),
   tool: [
     { label: "Visual Studio Code", isConfident: true },
-    { label: "Microsoft PowerApps", isConfident: false },
-    { label: "Microsoft SharePoint", isConfident: false },
+    { label: "Node.js", isConfident: true },
+    { label: "Docker", isConfident: true },
   ].map((item, index) => ({ ...item, id: index + 1 } as DataSkill)),
 };
 
 export const socials: DataSocials = [
-  { link: "https://youtube.com", icon: IconBrandYoutube, iconColor: "red" },
-  { link: "mailto:ini.dwiii@gmail.com", icon: IconBrandGmail, iconColor: "red" },
+  { link: "mailto:dp30.work@gmail.com", icon: IconBrandGmail, iconColor: "red" },
   { link: "https://github.com/eternalbeginner", icon: IconBrandGithub, iconColor: "dark" },
   { link: "https://linkedin.com/in/wiipaaa", icon: IconBrandLinkedin, iconColor: "blue" },
-  { link: "tel:6281262360039", icon: IconPhoneCall, iconColor: "green" },
+  { link: "tel:6282340093545", icon: IconPhoneCall, iconColor: "green" },
 ].map((item, index) => ({ ...item, id: index + 1 } as DataSocial));
